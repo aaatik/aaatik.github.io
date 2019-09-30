@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+  <title>PROFIL</title>
+
+    <link rel="stylesheet" href="css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    body {margin:0;}
+li-nav a {
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+active {
+  background-color: #4CAF50;
+}
+
+    </style>
+</head>
+
+<body style="background-image:url(img/bg.jpg);background-size:1400px;">
+  <div class="navbar">
+                      <ul-nav>
+                        <img src="img/logo.png" width="140px">
+                        <li-nav style="float:right"><a class="active" href="profil.html">Profil</a></li-nav>
+                        <li-nav style="float:right"><a href="troli.html">Troli</a></li-nav>
+                        <li-nav style="float:right"><a href="home.html">Home</a></li-nav>
+                      </ul-nav> 
+    </div>
+      <br>
+      <div class="container" align="center">
+        <div class="card" style="width: 48rem;">
+          <div class="card-body">
+          <h1 align="center">Profil</h1>
+          <br></br>
+          <form>
+            <div class="form-group row">
+              <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
+              <div class="col-sm-10">
+                <input type="nama"  name="nama" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" name="email" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
+              <div class="col-sm-10">
+                <textarea rows="4" cols="50" input type="text" name="alamat" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputKec" class="col-sm-2 col-form-label">Kecamatan</label>
+              <div class="col-md-4 mb-3">
+              <select class="custom-select d-block w-100" id="kecamatan">
+                <option value="Sumbersari">Sumbersari</option>
+                <option value="Tegal Besar">Tegal Besar</option>
+                <option value="Arjasa">Arjasa</option>
+              </select>
+            </div>
+            <label for="inputKab" lass="col-sm-2 col-form-label">Kabupaten</label>
+            <div class="col-md-4 mb-3">
+              <select class="custom-select d-block w-100" id="kabupaten">
+                <option value="Jember">Jember</option>
+                <option value="Probolinggo">Probolinggo</option>
+                <option value="Bondowoso">Bondowoso</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group row">
+              <label for="inputTelp" class="col-sm-2 col-form-label">No. Telp</label>
+              <div class="col-sm-10">
+                <input type="text" maxlength="13" name="telp" class="form-control" placeholder="081xxxxxxxxxx" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputdate" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+              <div class="col-sm-10">
+              <input class="form-control" placeholder="Tanggal Lahir" type="date">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputgender" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br>
+      <br>
+              <a align="center"><button type="submit" class ="btn btn-primary btn-block" name="submit" href="profilubah.html">Ubah</button></a>
+
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>

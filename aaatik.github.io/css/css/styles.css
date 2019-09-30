@@ -1,0 +1,25 @@
+.bg{
+color: white;
+background-color: white;
+}
+
+.card-img-top{
+	width: 150px;
+	height: 150px;
+}
+
+.card-full{
+	padding: 1px;
+	color: #ffffff;
+	width: 200px;
+	height: 200px;
+}
+ 
+.navbar{
+	  padding:40px 0;
+}
+
+.foto{
+	width: 200px;
+	height: 200px;
+}

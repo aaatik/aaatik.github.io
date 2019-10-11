@@ -2,47 +2,20 @@
 <html>
 
 <head>
-    <title>REGISTER</title>
-
+    <title>Daftar</title>
     <link rel="stylesheet" href="css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-    body {margin:0;}
-li-nav a {
-  display: block;
-  color: grey;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
-}
-
-active {
-  background-color: #4CAF50;
-}
-
-    </style>
 </head>
-
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
-  <div class="navbar">
-                      <ul-nav>
-                        <img src="img/logo.png" width="140px">
-                        <li-nav style="float:right"><a href="daftar.html">Daftar</a></li-nav>
-                        <li-nav style="float:right"><a class="active" href="masuk.html">Masuk</a></li-nav>
-                      </ul-nav> 
-    </div>
+  <ul>
+   <img src="img/logo.png" width="140px">
+      <li><a href="masuk.html" >Login</a></li>
+      <li><a href="daftar.html">Daftar</a></li>
+  </ul> 
+<br><br>
+<br><br>
+
     <div class="login-clean">
         <form align="center"><h3 align="center">Registrasi</h3>
           <div class="illustration">
@@ -50,21 +23,16 @@ active {
               <input type="email" name="email" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="text" name="nama" placeholder="Nama"  class="form-control">
+              <input type="email" name="nama" placeholder="Nama"  class="form-control">
             </div>
             <div class="form-group">
               <input class="form-control" type="password" name="password" placeholder="Password">
             </div>
           </div>
             <div class="gender" ><a>Jenis Kelamin</a>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="JK" id="inlineRadio1" value='Laki-laki'' >
-                <label class="form-check-label" for="inlineRadio1" >Laki-laki</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="JK" id="inlineRadio2"  value='Perempuan'>
-                <label class="form-check-label" for="inlineRadio1">Perempuan</label>
-              </div>
+              <br>
+                <input type="radio" name="gender" value="male" checked> Laki-laki<br>
+                <input type="radio" name="gender" value="female"> Perempuan<br>
             </div>
               <a align="center"><button type="submit" class ="btn btn-primary btn-block" name="submit">Daftar</button>
 

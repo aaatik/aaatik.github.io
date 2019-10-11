@@ -16,7 +16,7 @@
 .login-clean .illustration {
   text-align:center;
   padding:0 0 20px;
-  font-size:100px;
+  font-size:50px;
   color:rgb(244,71,107);
 }
 
@@ -30,7 +30,6 @@
   color:inherit;
   text-indent:8px;
   height:42px;
-  width: 280px;
 }
 
 .login-clean form .btn-primary {
@@ -44,10 +43,3 @@
   outline:none !important;
 }
 
-.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
-  background:#eb3b60;
-}
-
-.login-clean form .btn-primary:active {
-  transform:translateY(1px);
-}

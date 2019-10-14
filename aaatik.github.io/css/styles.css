@@ -32,6 +32,7 @@ input[type=submit] {
   cursor: pointer;
   float: right;
 }
+
 input[type=submit]:hover {
   background-color: #45a049;
 }
@@ -119,3 +120,54 @@ th, td {
   padding: 8px;
 }
 
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+	background-color: #f44336;/* Red */ 
+} 
+
+.button3 {
+	background-color: #555555;/* Black */
+} 

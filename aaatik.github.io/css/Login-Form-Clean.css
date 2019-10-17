@@ -35,8 +35,8 @@
   box-shadow:none;
   outline:none;
   color:inherit;
-  text-indent:8px;
   height:42px;
+  width:100%;
 }
 
 .login-clean form .btn-primary {
@@ -60,4 +60,24 @@ h4{
 h3{
   font-size: 12px;
   color:black;
+}
+label {
+  font-size: 14px;
+  color: grey;
+  font-family: times new roman;
+}
+
+.btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
 }

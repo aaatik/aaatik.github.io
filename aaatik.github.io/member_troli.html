@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Troli </title>
+    <link rel="stylesheet" href="css/Navigation-Clean.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-image:url(img/bg.jpg);background-size:1400px;">
+  <ul>
+   <a href="member_home.html"><img src="img/logo.png" width="140px"></a>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn" >Akun</a>
+          <div class="dropdown-content">
+            <a href="member_profil.html">Profil</a>
+            <a href="member_pesanan.html">Pesanan</a>
+            <a href="bantuan.html">Bantuan</a>
+            <a href="daftar.html">Log out</a>
+          </div>
+      </li>
+      <li><a href="member_troli.html" >Troli</a></li>
+      <li><a href="member_home.html">Home</a></li>
+  </ul> 
+  <br><br>
+<br><br>
+<div class="container">
+  <h2 align="center"> Troli Saya</h2>
+  <br></br>
+  <div class="tabelproduk">
+  <table>  
+      <tr>
+        <th scope="col">Produk</th>
+        <th scope="col">harga Satuan</th>
+        <th scope="col">Jumlah</th>
+        <th scope="col">Total Bayar</th>
+        <th scope="col">Aksi</th>
+      </tr>
+      <tr>
+        <td> Bawang Putih</td>
+        <td>22000</td>
+        <td><select class="custom-select">
+            <option value="1">1</option>
+            <option value ="2">2</option>
+            <option value selected="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            </select></td>
+        <td>66000</td>
+        <td><button class="button button2">Hapus</button> </td>
+      </tr>
+      <tr>
+        <td> Bawang Merah </td>
+        <td>20000</td>
+        <td><select class="custom-select">
+            <option value selected="1">1</option>
+            <option value ="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            </select></td>
+        <td>20000</td>
+        <td><button class="button button2"> Hapus </button></td>
+      </tr>
+      <tr>
+        <td> Cabai  Rawit  </td>
+        <td>30000</td>
+        <td><select class="custom-select">
+            <option value selected="1">1</option>
+            <option value ="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            </select></td>
+        <td>30000</td>
+        <td><button class="button button2"> Hapus </button></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <th colspan="4">Total</th>
+        <th>116.000</th>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  <br>
+  <div class="tabeldetail">
+  <h2 align="center" >Detail Pengiriman</h2>
+  <div class="row">
+    <div class="col-25">
+      <label for="name">Nama</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" placeholder="nama...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="uname">Alamat</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="alamat" name="alamat" placeholder="alamat...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kabupaten">Kabupaten</label>
+    </div>
+    <div class="col-75">
+      <select id="kabupaten" name="kabupaten">
+        <option value="jbr"> Jember</option>
+        <option value="stb">Situbondo</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kecamatan">Kecamatan</label>
+    </div>
+    <div class="col-75">
+      <select id="kecamatan" name="kecamatan">
+        <option value="sb">Sumbersari</option>
+        <option value="blg">Balung</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="hp">No. Telepon</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="hp" name="hp" placeholder="08xxxxxxx...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kirim">Metode Pengiriman</label>
+    </div>
+    <div class="col-75">
+      <select id="kirim" name="kirim">
+        <option value="jne">JNE</option>
+        <option value="goride">Go Ride</option>
+        <option value="jnt">J&T</option>
+        <option value="sicepat">Sicepat</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="bayar">Metode Bayar</label>
+    </div>
+    <div class="col-75">
+      <select id="bayar" name="bayar">
+        <option value="Indomaret">Indomaret</option>
+        <option value="bni">BNI</option>
+        <option value="bri">BRI</option>
+        <option value="bca">BCA</option>
+      </select>
+    </div>
+  </div>
+</div>  
+<br>
+  <div class="row" align="center">
+    <a href="member_pesanan.html"><button class="button">Buat Pesanan</button>
+  </div>
+</div>
+</body>
+
+</html>
+
+
+  

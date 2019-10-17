@@ -1,15 +1,17 @@
 
 /* atur form profil*/
 h2{
-	color: green;
-	font-size: 25px;
+  color: green;
+  font-size: 25px;
 }
 
 * {
   box-sizing: border-box;
 
 }
-
+input[type=password]{
+  padding: 12px;
+}
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -104,6 +106,9 @@ input[type=submit]:hover {
 table {
   border-collapse: collapse;
   width: 100%;
+  color: black;
+  background-color: white;
+  align-content: center;
 }
 
 th {
@@ -112,7 +117,7 @@ th {
 }
 
 tr:hover {
-	background-color: grey;
+  background-color: grey;
 }
 
 th, td {
@@ -124,8 +129,15 @@ th, td {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 20%;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    width: 50%;
+    padding: 15px;
+  }
 }
 
 /* Clear floats after the columns */
@@ -165,9 +177,13 @@ th, td {
 }
 
 .button2 {
-	background-color: #f44336;/* Red */ 
+  background-color: #f44336;/* Red */ 
 } 
 
 .button3 {
-	background-color: #555555;/* Black */
+  background-color: #555555;/* Black */
 } 
+
+.custom-select{
+  width: 50%;
+}

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Data Pesanan</title>
+  <title>Pesanan</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,12 +12,12 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn" >Akun</a>
           <div class="dropdown-content">
-            <a href="member_profil.html">Profil</a>
+            <a href="admin_profil.html">Profil</a>
+            <a href="admin_member.html">Member</a>
             <a href="daftar.html">Log out</a>
           </div>
       </li>
-      <li><a href="member_troli.html" >Pesanan</a></li>
-      <li><a href="member_home.html">Member</a></li>
+      <li><a href="admin_pesanan.html" >Pesanan</a></li>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn" >Kategori</a>
           <div class="dropdown-content">
@@ -27,57 +27,161 @@
       </li>
       <li><a href="admin_home.html">Home</a></li>
   </ul> 
-<br><br>
-<br><br>
-    <body>
+  <br><br>
+      <br>
       <div class="container">
+            <h2 align="center">Data Pesanan </h2>
+            <br></br>
+            <div style="overflow-x:auto;">
+              <table border="2px">
+                <tr>
+                  <th scope="col">Tanggal Pemesanan</th>
+                  <th scope="col">Id Pesanan</th>
+                  <th scope="col">Id User</th>
+                  <th scope="col">Total Harga</th>
+                  <th scope="col">Status Bayar</th>
+                  <th scope="col">Status Barang</th>
+                  <th scope="col">No Resi</th>
+                  <th scope="col">Keterangan</th>
+                </tr>
+                <tr>
+                  <td> 21 Oktober 2019</td>
+                  <td>123</td>
+                  <td>12</td>
+                  <td>25000</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value selected="blm">Belum Terverifikasi</option>
+                      <option value="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value="kirim">Dikirim</option>
+                      <option value selected="proses">Proses</option>
+                      <option value="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 19 Oktober 2019</td>
+                  <td>111</td>
+                  <td>45</td>
+                  <td>22100</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value selected="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 1 Oktober 2019</td>
+                  <td>100</td>
+                  <td>68</td>
+                  <td>67000</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value selected="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 1 Oktober 2019</td>
+                  <td>77</td>
+                  <td>23</td>
+                  <td>72000</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value selected="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 1 Oktober 2019</td>
+                  <td>56</td>
+                  <td>35</td>
+                  <td>35000</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value selected="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 1 Oktober 2019</td>
+                  <td>52</td>
+                  <td>56</td>
+                  <td>52100</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value selected="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+                <tr>
+                  <td> 1 Oktober 2018</td>
+                  <td>35</td>
+                  <td>20</td>
+                  <td>54000</td>
+                  <td><select id="stbyr" name="stbyr">
+                      <option value="blm">Belum Terverifikasi</option>
+                      <option value selected="sdh">Terverifikasi</option>
+                      </select></td>
+                  <td><select id="stbrg" name="stbrg">
+                      <option value="kirim">Dikirim</option>
+                      <option value="proses">Proses</option>
+                      <option value selected="selesai">Selesai</option>
+                      </select></td>
+                  <td><input type="text" name="Resi"></td>
+                  <td><button class="button">Detail</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+    <br>
+      <div class="center">
+        <div class="pagination">
+          <a href="#" class="disable">&laquo;</a>
+          <a href="#"class="active">1</a>
+          <a href="#" >2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </div>
+      <br>
+  </div>
+</body>
 
-      <h2 align="center"> Data Pesanan</h2>   
-    <div class="table">
-<table border="1" align="center">
-	 
-	<tr>
-		<th width="15px"(width=50px)> Id Pesanan </th>
-		<th width="15px" (width=100px)> Id Member </th>
-		<th width="50px"(width=10px)> Tanggal Pesan </th>
-		<th width="15px"(width=300px)> Id Produk </th>
-		<th width="50px" (width=15px)> Total Harga</th>
-    <th width="25px" (width=15px)> Status Bayar</th>
-    <th width="25px" (width=15px)> Status Barang</th>
-    <th width="50px" (width=15px)> No. Resi</th>
-    <th width="50px" (width=15px)> Aksi</th>
-
-	</tr>
-    <tr>
-        <td>abc</td>
-        <td>aorp</td>
-        <td>22-01-2019</td>
-        <td> 100></td>
-        <td>40000</td>
-        <td> Terbayar </td>
-        <td> Persiapan </td>
-        <td> 43487897654</td>
-        <td><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
-    </tr>
-    <tr>
-        <td>432</td>
-        <td>dvsf</td>
-        <td>2-01-2019</td>
-        <td> 200></td>
-        <td>36000</td>
-        <td> Belum Bayar </td>
-        <td>  </td>
-        <td> </td>
-        <td><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
-    </tr>
-    <tr>
-        <td>srd</td>
-        <td>asdm</td>
-        <td>29-01-2019</td>
-        <td> 103></td>
-        <td>10000</td>
-        <td> Terbayar </td>
-        <td> Packing </td>
-        <td> 342421413</td>
-        <td><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
-    </tr>
+</html>

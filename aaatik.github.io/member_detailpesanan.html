@@ -26,16 +26,93 @@
 <div class="container">
   <h2 align="center"> Detail Pesanan</h2>
   <br>
-  <h3> No Pesanan : 141
-    <br> No Resi : - </h3>
-  <p font-size="14 px">Tanggal : 18 Oktober 2019
-    <br> Nama : Tri wahyuni
-    <br> Alamat : Jl. Mastrip 11
-    <br> Kabupaten : Jember
-    <br> Kecamatan : Sumbersari
-    <br> No. Telepon : 089520361624
-    <br> Metode Kirim : JNE
-    <br> Metode Bayar : Indomaret</p>
+    <div class="row">
+    <div class="col-25">
+      <label for="idpesanan">No Pesanan</label>
+    </div>
+    <div class="col-25">
+      <label for="idpesanan">1213243432</label>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="TGLpesanan">Tanggal Pesanan</label>
+    </div>
+    <div class="col-25">
+      <label for="TGLpesanan">12 OKTOBER 2019</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="name">Nama</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" placeholder="nama...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="uname">Alamat</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="alamat" name="alamat" placeholder="alamat...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kabupaten">Kabupaten</label>
+    </div>
+    <div class="col-75">
+      <select id="kabupaten" name="kabupaten">
+        <option value="jbr"> Jember</option>
+        <option value="stb">Situbondo</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kecamatan">Kecamatan</label>
+    </div>
+    <div class="col-75">
+      <select id="kecamatan" name="kecamatan">
+        <option value="sb">Sumbersari</option>
+        <option value="blg">Balung</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="hp">No. Telepon</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="hp" name="hp" placeholder="08xxxxxxx...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kirim">Metode Pengiriman</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="kirim" name="kirim" placeholder="JNE">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="bayar">Metode Bayar</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bayar" name="bayar" placeholder="BRI">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Resi">No. Resi</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Resi" name="Resi" placeholder="xxxxxx">
+    </div>
+  </div>
+  <br>
   <div class="tabelproduk">
   <table>  
       <tr>
@@ -65,7 +142,29 @@
   </table>
   </div>
   <br>
-    <h3> Total yang harus dibayar RP 116.000<br> Bayar di Indomaret sebelum tanggal 19 Oktober 2019<br> Kode Perusahaan : 70120<br> Kode Tagihan : 3305365021 </h3>  
+  <div class="row">
+    <div class="col-25">
+      <label for="Total">Total Bayar </label>
+    </div>
+    <div class="col-75">
+      <label for="Total">Rp 116.000 </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="kper">Kode Perusahaan :</label>
+    </div>
+    <div class="col-25">
+      <label for="kper">70120</label>
+    </div>
+    <div class="col-25">
+      <label for="kper">Kode Tagihan :</label>
+    </div>
+    <div class="col-25">
+      <label for="kper">3305365021</label>
+    </div>
+  </div>
+    <h3>Bayar di Indomaret sebelum tanggal 19 Oktober 2019</h3>
   <div class="row" align="right">
     <a href="member_pesanan.html"><button class="button button3">Kembali</button>
   </div>

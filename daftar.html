@@ -16,12 +16,13 @@
     <div class="login-clean">
         <form align="center"><h2 align="center">Registrasi</h2>
           <div class="illustration">
-            <input type="text" class="register" id="email" placeholder="Email" required>
-            <input type="text" class="register" id="nama" placeholder="Nama Lengkap" required>
-            <input type="password" class="register" id="password" placeholder="Password" required>
+            <form action="#!" name="registers">
+            <input type="text" class="register" id="email" placeholder="Email">
+            <input type="text" class="register" id="nama" placeholder="Nama Lengkap">
+            <input type="password" class="register" id="password" placeholder="Password">
             <br>
-            <input type="submit" class="btn" onclick="returnValidation()" value="Daftar" />
-
+            <a class="btn" href="javascript: returnValidation()">Daftar</a>
+            <!-- <input type="submit" class="btn" onclick="returnValidation()" value="Daftar" /> -->
         </form>
     </div>
 </body>
@@ -36,7 +37,7 @@
       return false;
     }
     else if(nama !="" && email !="" && password !=""){
-     alert ("Anda berhasil masuk") ;
+     alert ("Anda berhasil daftar") ;
      window.location.href = "member_home.html";
    }
    else{

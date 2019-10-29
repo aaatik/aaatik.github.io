@@ -14,14 +14,15 @@
 	<br><br>
 	<br><br>
     <div class="login-clean">
-        <form>
+        <form >
         	<h2 align="center">Masuk</h2>
           <div class="illustration">
             <form action="#!" name="logins">
     		<input type="text" class="login" id="email" placeholder="Email" >
     		<input type="password" class="login" id="password" placeholder="Password" >
     		<br>
-			<input type="submit" class="btn" onclick="returnValidation()" value="Masuk" />
+			<!-- <input type="submit" class="btn" onclick="returnValidation()" value="Masuk" /> -->
+			<a class="btn" href="javascript: returnValidation()">Masuk</a>
               <h3>Tidak memiliki akun?</h3><a href="daftar.html"><h4>Daftar Sekarang.</h4></a>
           </div>
         </form>
@@ -35,7 +36,7 @@
     console.log(email);
 
     if(email =="admin@admin" && password =="admin"){
-     window.location.href = "member_home.html";
+     window.location.href = "admin_home.html";
    }else if(email =="" && password ==""){
     alert ("Data tidak boleh kosong") ;
     return false;

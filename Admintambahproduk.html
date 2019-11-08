@@ -74,12 +74,11 @@
       <label for="foto">Foto</label>
     </div>
     <div class="col-75">
-      <input multiple type="file" name="gambar" id="preview_gambar"/>
-      <br><br>
-      <img src="#" id="pregambar" width="250" alt="Gambar"  value="Show" />
-      <ul id="ulList">
+      <div class="file--upload">
+      <input type="file" onchange="readURL(this)" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
     </div>  
-    </div>   
+    </div>
+
   <br><br>
   <div class="row" align="right">
     <a href="admin_home.html"><button class="button">Simpan</button></a>
@@ -87,30 +86,41 @@
   </div>
 
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery/jquery.min.js"></script>
+<script type="text/javascript">
+function bacagambar(input) { // Mulai membaca inputan gambar
+  if (input.files && input.files[0]) {
+var reader = new FileReader(); // Membuat variabel reader untuk API FileReader
+reader.onload = function (e) { // Mulai pembacaan file
+$('.image--preview') // Tampilkan gambar yang dibaca ke area id #preview_gambar
+.attr('src', e.target.result)
+.width(150); // Menentukan lebar gambar preview (dalam pixel)
+//.height(200); // Jika ingin menentukan lebar gambar silahkan aktifkan perintah pada baris ini
+}
+$('.image--type').html(input.files[0].type);
+$('.image--name').html(input.files[0].name);
+$('.image--size').html(input.files[0].size);
+reader.readAsDataURL(input.files[0]);
+}
+}
+$('.file--upload input').change(function () {
+  $('.image--detail-all').remove();
+  $('.file--upload').append(`
+    <ul class="ul__list">
+    <img class="image--preview" src= alt="">
+    <li>Nama File : <span class="image--name" onchange="bacagambar(this)"></span></li>
+    <li>Ukuran : <span class="image--size" onchange="bacagambar(this)"></span></li>
+    <li>Tipe: <span class="image--type" onchange="bacagambar(this)"></span></li>
+    </ul>
+    `);
 
-  </body>
-  <script >
-  function bacaGambar(input) {
-   if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-          $('#pregambar').attr('src', e.target.result);
-      }
-      reader.readAsDataURL(input.files[0]);
-      }
-    }
-    $("#preview_gambar").change(function(){
-    bacaGambar(this);
-    });
-
-
-    $(document).ready(function(){
-        $('input[type="file"]').change(function(e){
-            var fileName = e.target.files[0].name;
-            alert('Fle "' + fileName +  '" sudah terpilih.');
-      });
-    });
-
+      alert("Anda sudah memilih gambar!");
+    
+  bacagambar(this);
+});
 </script>
+  </body>
+  
 
 </html>

@@ -5,6 +5,8 @@
   <title>Pesanan</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
@@ -42,7 +44,7 @@
                   <td>25.000</td>
                   <td>Belum Terverifikasi</td>
                   <td>Proses</td>
-                  <td><button class="button button2" >Batal</button> <a href="member_detailpesanan.html"><button class="button">Detail</button> <a href="member_pembayaran.html"><button class="button" >Bayar</button></td>
+                  <td><button onclick="batalPesanan()" class="button button2" >Batal</button> <button class="button" onclick="document.getElementById('bayar').style.display='block'" >Bayar</button> <a href="member_detailpesanan.html"><button class="button">Detail</button> </td>
                 </tr>
                 <tr>
                   <td> 19 Oktober 2019</td>
@@ -95,10 +97,22 @@
               </tbody>
             </table>
           </div>
+    </div>
+        <br>
+      <div class="center">
+        <div class="pagination">
+          <a href="#" class="disable">&laquo;</a>
+          <a href="#"class="active">1</a>
+          <a href="#" >2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
         </div>
       </div>
-
-    </div>
+      <br>
+  </div>
     <br><br>
         <div class="footer">
             <div class="futer">
@@ -113,6 +127,39 @@
                 </nav>
             </div>
         </div>
+
+<div class="w3-container">    <!--<p>Ini modal yang akan muncul kalau button bayar di klik</p> -->
+  <div id="bayar" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container w3-white"> 
+        <span onclick="document.getElementById('bayar').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span> <!--<p>Ini buat muncul close x di kanan</p> -->
+        <h2>Bukti Bayar</h2>
+        <form class="w3-container">
+     <div class="w3-section">
+          <label><b>Nama</b></label>
+         <input class="w3-input w3-border w3-margin-bottom" type="text" id="name" name="name"  required>
+         <label ><b>No Pesanan</b></label>
+         <input class="w3-input w3-border w3-margin-bottom" type="text" id="pesanan" name="pesanan"  required>
+          <label ><b>Bank</b></label>
+          <select id="jk" name="tipe">
+            <option value="bni">BNI</option>
+            <option value="bri">BRI</option>
+            <option value="bca">BCA</option>
+            <option value="mandiri">Mandiri</option>
+            <option value="Indomaret">Indomaret</option>
+          </select>
+      <label ><b>Foto Bukti Transfer</b></label>
+      <input  multiple type="file" id="preview_gambar" />
+      <br>
+      <img src="#" id="pregambar" width="250" alt="Gambar" value="Show" />
+        <p><a href="member_pesanan.html"><button class="button" >Simpan</button></a> 
+          <a href="member_pesanan.html"><button class="button button3">Batal</button>  </p>
+      <br>
+    </div>
+  </div>
+</div>
+            
 </body>
 
 </html>

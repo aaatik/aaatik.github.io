@@ -52,7 +52,7 @@
         <td> <img src="img/cabe.jpg" width="100px"></td>
         <td>Sayur</td>
         <td> sayuran yang memiliki rasa pedas</td>
-        <td><a href="admin_editproduk.html"><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
+        <td><a href="admin_editproduk.html"><button class="button">Edit</button></a> <button onclick="hapus()" class="button button2">Hapus</button></td>
 
     </tr>
     <tr>
@@ -62,7 +62,7 @@
         <td> <img src="img/bawangputih.jpg" width="100px"></td>
         <td> Sayur</td>
         <td> sayuran yang merupakan bumbu penyedap rasa</td>
-        <td><a href="admin_editproduk.html"><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
+        <td><a href="admin_editproduk.html"><button class="button">Edit</button></a> <button onclick="hapus()" class="button button2">Hapus</button></td>
     </tr>
     <tr>
         <td> 202</td>
@@ -71,11 +71,29 @@
         <td> <img src="img/toge.png" width="100px"></td>
         <td> Sayur</td>
         <td> sayuran sandingan pecel</td>
-        <td><a href="admin_editproduk.html"><button class="button">Edit</button> <button class="button button2">Hapus</button></td>
-    </tr>
-    
-    
-</table>
-    
+        <td><a href="admin_editproduk.html"><button class="button">Edit</button> </a> <button onclick="hapus()" class="button button2">Hapus</button></td>
+    </tr>  
+  </table>
+</div>
+    <br>
+      <div class="center">
+        <div class="pagination">
+          <a href="#" class="disable">&laquo;</a>
+          <a href="#"class="active">1</a>
+          <a href="#" >2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </div>
+      <br>
+      
   </body>
+  <script>
+          function hapus() {
+        alert("Data dihapus!"); 
+      }
+  </script>
 </html>

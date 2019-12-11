@@ -3,29 +3,25 @@
 
 <head>    
   <title>Profil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
-   <a href="admin_beranda.html"><img src="img/logo.png" width="140px"></a>
+   <a href="member_home.html"><img src="img/logo.png" width="140px"></a>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn" >Akun</a>
           <div class="dropdown-content">
-            <a href="admin_profil.html">Profil</a>
-            <a href="admin_member.html">Member</a>
+            <a href="member_profil.html">Profil</a>
+            <a href="member_pesanan.html">Pesanan</a>
+            <a href="bantuan.html">Bantuan</a>
             <a href="masuk.html">Log out</a>
           </div>
       </li>
-      <li><a href="admin_pesanan.html" >Pesanan</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn" >Kategori</a>
-          <div class="dropdown-content">
-            <a href="admin_lihatbuah.html">Buah</a>
-            <a href="admin_lihatsayur.html">Sayur</a>
-        </div>
-      </li>
-      <li><a href="admin_home.html">Home</a></li>
+      <li><a href="member_troli.html" >Troli</a></li>
+      <li><a href="member_home.html">Home</a></li>
   </ul> 
 <br><br>
 <br><br>
@@ -55,21 +51,85 @@
       <input type="text" id="email" name="email" placeholder="email@...">
     </div>
   </div>
+  
+ 
+  
+ 
   <div class="row">
     <div class="col-25">
-      <label for="password">Password</label>
+      <label for="Password">Password</label>
     </div>
     <div class="col-75">
-      <input type="text" id="password" name="password" placeholder="">
+      <input type="text" id="Password" name="Password" placeholder="">
     </div>
   </div>
   <br>
   <div class="row" align="right">
-    <a href="admin_profilubah.html"><button class="button">Ubah</button>
+    
+  <td> <button onclick="document.getElementById('ubah').style.display='block'" class="button button3"> Ubah </button></td>
   </div>
 
         </div>
       </div>
+      <div class="w3-container">    
+  <div id="ubah" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-white"> 
+        <span onclick="document.getElementById('ubah').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span> <!--<p>Ini buat muncul close x di kanan</p> -->
+        <h2>Silahkan ubah profil</h2>
+      </header>
+      <div class="w3-container">
+        <div class="container">
+  <h2 align="center" >Ubah Profil</h2>
+  <div class="row">
+    <div class="col-25">
+      <label for="name">Nama</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" placeholder="nama...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="uname">Username</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="uname" name="uname" placeholder="username...">
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-25">
+   <label for="email">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="email@...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Password">Password</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Password" name="Password" placeholder="">
+    </div>
+  </div>
+
+  
+  <br>
+  
+      <footer class="w3-container w3-white "> <!--<p>Ini footer</p> -->
+        <p><a href="member_profil.html"><button class="button" onclick="berhasilubah()">Simpan</button></a> <a href="member_profil.html"><button class="button button3">Batal</button>  </p>
+      </footer>
+      <br>
+    </div>
+  </div>
+</div>
     </body>
+    <script>
+      function Simpan() {
+        alert("Perubahan berhasil di simpan!"); 
+      }
+    </script>
 
     </html>

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <title>Beranda</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
+  <div class ="menu"> 
   <ul>
+
    <a href="admin_beranda.html"><img src="img/logo.png" width="140px"></a>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn" >Akun</a>
@@ -80,7 +85,21 @@
 
     </div>
   </div>
-
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $('.klik_menu').click(function(){
+      var menu = $(this).attr('id');
+      if(menu == "Home"){
+        $('.container').load('admin_home,html');           
+      }else if(menu == "Pesanan"){
+        $('.container').load('admin_pesanan.html');            
+             
+      }
+    });
+ 
+ 
+    // halaman yang di load default pertama kali
+    $('.container').load('admin_home.html');           
 </body>
 
 </html>

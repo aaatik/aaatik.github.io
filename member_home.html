@@ -111,11 +111,11 @@
                 if (page == 2) {
                     $(more).hide();      //button more dihide
                 }
-                var path = "json/home_" + page + ".json";  //ngambil json berdasar page
+                var path = "json/home_" + page + ".json";  // yang dituju json berdasar page
                 $.ajax({
-                    url: path,
+                    url: path,  //url yg dituju
                     type: 'GET',
-                    dataType: 'json'
+                    dataType: 'json'   //tipe data yg dipake
                 })
                 .done(function(hasil){   //ketika berhasil
                     console.log("success");

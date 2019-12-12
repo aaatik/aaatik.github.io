@@ -1,0 +1,22 @@
+[  
+  {  
+   "judul" :"Terog Ungu",
+   "foto" :"img/terong.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Wortel",
+   "foto" :"img/wort.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Apel",
+   "foto" :"img/apel.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Pisang",
+   "foto" :"img/pisang.jpg",
+    "harga" :"5.000"
+  }
+]

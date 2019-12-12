@@ -115,7 +115,6 @@
       <input type="text" id="Resi" name="Resi" placeholder="xxxxxx">
     </div>
   </div>
-  <br>
   <div class="row">
     <div class="col-25">
       <label for="Total">Total Bayar </label>
@@ -141,27 +140,39 @@
 </div>
   <h3>Bayar di Indomaret sebelum tanggal 19 Oktober 2019</h3>
   <br>
-  <button type="button" id="infoDet">info Detail</button>
+    <div class="tabelproduk">
+  <table>  
+      <tr>
+        <th scope="col">Produk</th>
+        <th scope="col">harga Satuan</th>
+        <th scope="col">Jumlah</th>
+        <th scope="col">Total Bayar</th>
+      </tr>
+      <tr>
+        <td> Bawang Putih</td>
+        <td>22000</td>
+        <td>3</td>
+        <td>66000</td>
+      </tr>
+      <tr>
+        <td> Bawang Merah </td>
+        <td>20000</td>
+        <td>1</td>
+        <td>20000</td>
+      </tr>
+      <tr>
+        <td> Cabai  Rawit  </td>
+        <td>30000</td>
+        <td>1</td>
+        <td>30000</td>
+    </tr>
+  </table>
+  </div>
+  <br>
   <div class="row" align="right">
     <a href="member_pesanan.html"><button class="button button3">Kembali</button>
   </div>
 </div>
 </body>
-    <script type="text/javascript">
-   $("#infoDet").click(function(){
-  const ajax = new XMLHttpRequest();
-  ajax.open('GET', 'json/infoProduk.json', true);
-  ajax.onreadystatechange = function(){
-    if(this.readyState ===4 && this.status ===200){
-      let data = JSON.parse(this.responseText)
-      for (var i=0; i<data.length; i++) {
-         document.getElementById('infoDet').innerHTML += '<li>'+ data[i].name +'</li>';
-      }
-    }
-  }
-  ajax.send();
- }
- load_ajax();
-        </script>
 </html>
 

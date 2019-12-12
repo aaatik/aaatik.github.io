@@ -1,0 +1,22 @@
+[  
+  {  
+   "judul" :"Materi 5",
+   "foto" :"img/terong.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Materi 6",
+   "foto" :"img/terong.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Materi 7",
+   "foto" :"img/terong.jpg",
+    "harga" :"5.000"
+  },
+    {  
+   "judul" :"Materi 8",
+   "foto" :"img/terong.jpg",
+    "harga" :"5.000"
+  }
+]

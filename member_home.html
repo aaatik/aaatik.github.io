@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="jquery/jquery.min.js"></script>
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
@@ -27,6 +28,7 @@
 <br><br>
 
 <div class="home">
+<div class="homeproduk" page="">
 <div class="row">
   <div class="column">
     <div class="card">
@@ -38,6 +40,7 @@
       <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
     </div>
   </div>
+</div>
   <div class="column">
     <div class="card">
       <h2 align="center">Brokoli Hijau</h2>
@@ -68,83 +71,13 @@
             <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
         </div>
       </div>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Salak Pondoh</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/salak.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">38.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Brokoli Hijau</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/brokoli.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">25.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Durian runtuh</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/durian.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">41.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Terong Ungu</h2>
-          <div class="img" align="center">
-            <a href="member_detailproduk.html"><img src="img/terong.jpg" width="100"></a>
-          </div>
-            <p class="harga" align="center">5.000</p>
-            <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Salak Pondoh</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/salak.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">38.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h2 align="center">Brokoli Hijau</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/brokoli.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">25.000</p>
-      <p align="center"><button class="button button2">Tambah ke troli</button> <button class="button">Lihat detail</button>
-    </div>
-  </div>
+</div>
 </div>
 </div>
   <br>
-  <br>
-      <div class="center">
-        <div class="pagination">
-          <a href="#" class="disable">&laquo;</a>
-          <a href="#"class="active">1</a>
-          <a href="#" >2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">6</a>
-          <a href="#">&raquo;</a>
-        </div>
-      </div>
+  <div class="loading" align="center">
+    <button class="button" id="more">Lihat selanjutnya</button>
+  </div>
         <div class="footer">
             <div class="futer">
                 <nav>
@@ -159,5 +92,51 @@
             </div>
         </div>
 </body>
+  <script src="jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+        $("#more").click(function () {
+          var page = $(".homeproduk").attr("page");
+                page = Number(page);
+                if (page==""){
+                    page = 1;
+                } else {
+                    page += 1;
+                }
+                $(".homeproduk").attr("page", page);
+                if (page == 2) {
+                    $(more).hide();
+                }
+                var path = "json/home_" + page + ".json";
 
+            $.ajax({
+                url:  path,
+                type: 'GET',
+                dataType: 'json'
+            })
+            .done(function (load) {
+                console.log("sukses");
+                var data = "";
+                $.each(load, function (index, val) {
+                    data += `    
+                    </div>     
+              <div class="card">
+                <h2 align="center"> `+val.judul+`</h2>
+                <div class="img" align="center">
+                <a href="member_detailproduk.html"><img src="img/terong.jpg" width="100"></a>
+              </div>
+                <p class="harga" align="center"> `+val.harga+` </p>
+                <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
+        </div>
+      </div>
+      `;  
+                });
+                $(".column").append(data);
+            })
+            .fail(function(msg, err){
+                    console.log("Error");
+                    console.log(msg);
+                    console.log(err);
+            })
+        });
+    </script>
 </html>

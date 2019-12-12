@@ -29,51 +29,56 @@
 
 <div class="home">
 <div class="homeproduk" page="">
-<div class="row">
-  <div class="column">
+<div class="barisproduk">
+  <div class="kolom">
     <div class="card">
-      <h2 align="center">Salak Pondoh</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/salak.jpg" width="100px"></a>
-      </div>
+      <p align="center"><a href="member_detailproduk.html">
+      <img src="img/salak.jpg" alt="" id="img1" ></a></p>
+      <h2 id="img" align="center">Salak Pondoh</h2>
       <p class="harga" align="center">38.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
+      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
     </div>
   </div>
-</div>
-  <div class="column">
+  <div class="kolom">
     <div class="card">
-      <h2 align="center">Brokoli Hijau</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/brokoli.jpg" width="100px"></a>
-      </div>
+      <p align="center"><a href="member_detailproduk.html">
+      <img src="img/apel.jpg" alt="" id="img2" ></a></p>
+      <h2 id="img" align="center">Apel</h2>
       <p class="harga" align="center">25.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
+      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
     </div>
   </div>
-  <div class="column">
+    <div class="kolom">
     <div class="card">
-      <h2 align="center">Durian runtuh</h2>
-      <div class="img" align="center">
-        <a href="member_detailproduk.html"><img src="img/durian.jpg" width="100px"></a>
-      </div>
-      <p class="harga" align="center">41.000</p>
-      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
+      <p align="center"><a href="member_detailproduk.html">
+      <img src="img/wort.jpg" alt="" id="img3" ></a></p>
+      <h2 id="img" align="center">Wortel</h2>
+      <p class="harga" align="center">18.000</p>
+      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
     </div>
   </div>
-  <div class="column">
+    <div class="kolom">
     <div class="card">
-      <h2 align="center">Terong Ungu</h2>
-          <div class="img" align="center">
-            <a href="member_detailproduk.html"><img src="img/terong.jpg" width="100"></a>
-          </div>
-            <p class="harga" align="center">5.000</p>
-            <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-        </div>
-      </div>
+      <p align="center"><a href="member_detailproduk.html">
+      <img src="img/cabe.jpg" alt="" id="img4" ></a></p>
+      <h2 id="img" align="center">Cabai Rawit</h2>
+      <p class="harga" align="center">38.000</p>
+      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
+    </div>
+  </div>
+    <div class="kolom">
+    <div class="card">
+      <p align="center"><a href="member_detailproduk.html">
+      <img src="img/tomat.jpg" alt="" id="img5" ></a></p>
+      <h2 id="img" align="center">Tomat</h2>
+      <p class="harga" align="center">38.000</p>
+      <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
+    </div>
+  </div>
 </div>
 </div>
 </div>
+
   <br>
   <div class="loading" align="center">
     <button class="button" id="more">Lihat selanjutnya</button>
@@ -93,50 +98,49 @@
         </div>
 </body>
   <script src="jquery/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript">
-        $("#more").click(function () {
-          var page = $(".homeproduk").attr("page");
-                page = Number(page);
+    <script type="text/javascript">
+            $("#more").click(function(){           // ajax untuk load produk lain di home ketika di klik more
+                var page = $(".homeproduk").attr("page"); 
+                page = Number(page);  //baca page
                 if (page==""){
-                    page = 1;
+                    page = 1;    //page 1
                 } else {
-                    page += 1;
+                    page += 1; //page nambah
                 }
                 $(".homeproduk").attr("page", page);
                 if (page == 2) {
-                    $(more).hide();
+                    $(more).hide();      //button more dihide
                 }
-                var path = "json/home_" + page + ".json";
-
-            $.ajax({
-                url:  path,
-                type: 'GET',
-                dataType: 'json'
-            })
-            .done(function (load) {
-                console.log("sukses");
-                var data = "";
-                $.each(load, function (index, val) {
-                    data += `    
-                    </div>     
-              <div class="card">
-                <h2 align="center"> `+val.judul+`</h2>
-                <div class="img" align="center">
-                <a href="member_detailproduk.html"><img src="img/terong.jpg" width="100"></a>
-              </div>
-                <p class="harga" align="center"> `+val.harga+` </p>
-                <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button> <a href="member_detailproduk.html"><button class="button">Lihat detail</button></a></a></p>
-        </div>
-      </div>
-      `;  
-                });
-                $(".column").append(data);
-            })
-            .fail(function(msg, err){
+                var path = "json/home_" + page + ".json";  //ngambil json berdasar page
+                $.ajax({
+                    url: path,
+                    type: 'GET',
+                    dataType: 'json'
+                })
+                .done(function(hasil){   //ketika berhasil
+                    console.log("success");
+                    var load = "";         
+                    $.each(hasil, function(index, val){ //akan menampilkan data dimana val berarti memanggil di json
+                        load += `    
+                      </div>
+                      <div class="kolom"> 
+                  <div class="card">
+                    <p align="center"><a href="member_detailproduk.html">
+                    <img src="`+val.foto+`" alt="" id="img" ></a></p>
+                    <h2 id="img" align="center">`+val.judul+`</h2>
+                    <p class="harga" align="center">`+val.harga+`</p>
+                    <p align="center"><a href="member_troli.html"><button class="button button2">Tambah ke troli</button></a></p>
+                  </div>
+                  </div>
+                  `;
+                    });
+                    $(".barisproduk").append(load); //hasilnya ditambahkan baris baru
+                })
+                .fail(function(msg, err){
                     console.log("Error");
                     console.log(msg);
                     console.log(err);
+                });
             })
-        });
     </script>
 </html>

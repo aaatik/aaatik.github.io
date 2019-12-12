@@ -5,7 +5,9 @@
   <title>Edit Produk</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+      <script src="jquery/jquery.min.js"></script>
+      <script src="adm_editproduk.js"></script>
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
@@ -34,12 +36,13 @@
   <div class="container">
       <h2 align="center"> Edit Produk</h2>   
       <br>
+      <form action="#!" name="editpr">
   <div class="row">
     <div class="col-25">
       <label for="name">Nama</label>
     </div>
     <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="nama...">
+      <input type="text" id="name" name="name" >
     </div>
   </div>
   <div class="row">
@@ -47,7 +50,7 @@
       <label for="harga">Harga</label>
     </div>
     <div class="col-75">
-      <input type="text" id="harga" name="harga" placeholder="Rp xxxxxx...">
+      <input type="text" id="harga" name="harga" >
     </div>
   </div>
   <div class="row">
@@ -74,46 +77,39 @@
       <label for="foto">Foto</label>
     </div>
     <div class="col-75">
-      <p id="atas">
-        <input multiple type="file" id="preview_gambar"/> <!--input file  -->
-        <br><br>
-        <img src="#" id="pregambar" width="250" alt="Gambar"  value="Show" /> <!--  nampilin gambar -->
-      </p>
-      <p id="bawah"> <!--  nampilin info file  -->
-      </p>
+      <label class="image"></label>  <!-- extend jquery adm_editproduk.js -->
+      <p id="bawah"> </p>  <!--  nampilin info file  -->
     </div>  
     </div>   
   <br><br>
   <div class="row" align="right">
-    <a href="admin_home.html"><button class="button">Simpan</button></a>
-    <a href="admin_home.html"><button class="button button3">Kembali</button></a>
+    <a class="button" href="javascript: ValidationEdit()">Simpan</a>  
+    <a href="admin_home.html" class="button button3">Kembali</a>
   </div>
-
+  </form>
+  </div>
 </div>
 
   </body>
-  <script >
-  function bacaGambar(input) {
-   if (input.files && input.files[0]) { //kalo file keinput
-      var reader = new FileReader();
-      reader.onload = function (e) {
-          $('#pregambar').attr('src', e.target.result);
-      }
-      reader.readAsDataURL(input.files[0]);
-      }
+<script type="text/javascript">
+  function ValidationEdit(){   //fungsi validasi form
+    var name = document.getElementById("name").value;
+    var harga = document.getElementById("harga").value;
+    var desk = document.getElementById("desk").value;
+    console.log(name);
+    if(name =="" && harga =="" && desk ==""){  //cek jika kosong
+      alert ("Data tidak boleh kosong") ;
+      return false;
     }
-
-    $("#preview_gambar").change(function(){
-      
-      if (this.files[0].size > 3145728) {             // kalo file lebih dr 3mb atau 3145728 bytes
-        alert("Gagal upload! File lebih dari 3MB!"); 
-      } else { 
-        bacaGambar(this);                             // kalo kurang dr 3mb nampilin gambar
-        $('#bawah').text("Nama file : " + this.files[0].name + " , size : " + this.files[0].size + " bytes" + " , tipe : " + this.files[0].type );    //nampilin info
-      }
-    });
-
-
+    else if(name !="" && harga !="" && desk !=""){ //cek jika ada 
+     alert ("Berhasil mengedit produk") ;
+     window.location.href = "admin_editproduk.html";
+   }
+   else{
+    alert ("Data tidak boleh kosong") ;
+    return false;
+  }
+}
 </script>
 
 </html>

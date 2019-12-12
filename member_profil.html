@@ -32,7 +32,7 @@
       <label for="name">Nama</label>
     </div>
     <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="nama...">
+      <input type="text" id="name" name="name" >
     </div>
   </div>
   <div class="row">
@@ -40,7 +40,7 @@
       <label for="uname">Username</label>
     </div>
     <div class="col-75">
-      <input type="text" id="uname" name="uname" placeholder="username...">
+      <input type="text" id="uname" name="uname" >
     </div>
   </div>
   <div class="row">
@@ -48,7 +48,7 @@
       <label for="email">Email</label>
     </div>
     <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="email@...">
+      <input type="text" id="email" name="email" >
     </div>
   </div>
   <div class="row">
@@ -67,7 +67,7 @@
       <label for="hp">Telepon</label>
     </div>
     <div class="col-75">
-      <input type="text" id="hp" name="hp" placeholder="08xxxxxxx...">
+      <input type="text" id="hp" name="hp" >
     </div>
   </div>
   <div class="row">
@@ -75,7 +75,7 @@
       <label for="alamat">Alamat</label>
     </div>
     <div class="col-75">
-      <input type="text" id="alamat" name="alamat" placeholder="alamat...">
+      <input type="text" id="alamat" name="alamat" >
     </div>
   </div>
   <div class="row">
@@ -91,23 +91,23 @@
       <label for="Password">Password</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Password" name="Password" placeholder="">
+      <input type="text" id="Password" name="Password" >
     </div>
   </div>
   <br>
   <div class="row" align="right">
     
-  <td> <button onclick="document.getElementById('ubah').style.display='block'" class="button button3"> Ubah </button></td>
+  <td> <button onclick="document.getElementById('ubah').style.display='block'" class="button"> Ubah </button></td>
   </div>
 
         </div>
       </div>
-      <div class="w3-container">    
+      <div class="w3-container">    <!--Ini buat muncul modal -->
   <div id="ubah" class="w3-modal">
     <div class="w3-modal-content">
       <header class="w3-container w3-white"> 
         <span onclick="document.getElementById('ubah').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span> <!--<p>Ini buat muncul close x di kanan</p> -->
+        class="w3-button w3-display-topright">&times;</span> <!-- Ini buat muncul close x di kanan-->
         <h2>Silahkan ubah profil</h2>
       </header>
       <div class="w3-container">
@@ -118,7 +118,7 @@
       <label for="name">Nama</label>
     </div>
     <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="nama...">
+      <input type="text" id="name" name="name">
     </div>
   </div>
   <div class="row">
@@ -126,7 +126,7 @@
       <label for="uname">Username</label>
     </div>
     <div class="col-75">
-      <input type="text" id="uname" name="uname" placeholder="username...">
+      <input type="text" id="uname" name="uname" >
     </div>
   </div>
   <div class="row">
@@ -134,7 +134,7 @@
       <label for="email">Email</label>
     </div>
     <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="email@...">
+      <input type="text" id="email" name="email" >
     </div>
   </div>
   <div class="row">
@@ -153,7 +153,7 @@
       <label for="hp">Telepon</label>
     </div>
     <div class="col-75">
-      <input type="text" id="hp" name="hp" placeholder="08xxxxxxx...">
+      <input type="text" id="hp" name="hp" >
     </div>
   </div>
   <div class="row">
@@ -161,7 +161,7 @@
       <label for="alamat">Alamat</label>
     </div>
     <div class="col-75">
-      <input type="text" id="alamat" name="alamat" placeholder="alamat...">
+      <input type="text" id="alamat" name="alamat" >
     </div>
   </div>
   <div class="row">
@@ -174,25 +174,49 @@
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="Password">Password</label>
+      <label for="Password lama">Password Lama</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Password" name="Password" placeholder="">
+      <input type="text" id="Password" name="Password" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Passwordbaru">Password Baru</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Passwordbaru" name="Passwordbaru" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="KonPassword">Konfirm Password Baru</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="KonPassword" name="KonPassword" >
     </div>
   </div>
   <br>
-  
-      <footer class="w3-container w3-white "> <!--<p>Ini footer</p> -->
-        <p><a href="member_profil.html"><button class="button" onclick="berhasilubah()">Simpan</button></a> <a href="member_profil.html"><button class="button button3">Batal</button>  </p>
+      <footer class="w3-container w3-white "> <!-- Ini footer-->
+        <div class="tombol" align="right">
+        <p><a href="member_profil.html"><button class="button" onclick="berhasilubah()">Simpan</button></a> <a href="member_profil.html"><button class="button button3">Batal</button></a>  </p>
+      </div>
       </footer>
+
       <br>
     </div>
   </div>
 </div>
     </body>
     <script>
-      function Simpan() {
+      function berhasilubah() {
         alert("Perubahan berhasil di simpan!"); 
+      }
+      var modal = document.getElementById('ubah');
+      window.onclick = function(event) { // ketika dipencet di luar area modal maka akan close
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
       }
     </script>
 

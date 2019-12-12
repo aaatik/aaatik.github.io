@@ -194,11 +194,13 @@
         <h2>Tambah Nomor Resi</h2>
       </header>
       <div class="w3-container">
+        <form action="#!" name="upres">
         <p>Masukkan nomor resi pengiriman</p>
-        <p><input type="text"></p>
+        <p><input type="text" class="resi" id="uresi"></p>
       </div>
-      <footer class="w3-container w3-white "> <!--<p>Ini footer</p> -->
-        <p><a href="admin_pesanan.html"><button class="button" onclick="berhasilResi()">Simpan</button></a> <a href="admin_pesanan.html"><button class="button button3">Batal</button>  </p>
+      <a class="button" href="javascript: ValidationResi()">Simpan</a>
+      </form>
+      <a href="admin_pesanan.html"><button class="button button3">Batal</button>  </p>
       </footer>
       <br>
     </div>
@@ -206,9 +208,22 @@
 </div>
             
 </body>
-    <script>
-      function berhasilResi() {
-        alert("Resi telah tersimpan!"); 
-      }
-    </script>
+<script type="text/javascript">
+  function ValidationResi(){
+    var uresi = document.getElementById("uresi").value;
+    console.log(uresi);
+    if(uresi ==""){
+      alert ("Data tidak boleh kosong") ;
+      return false;
+    }
+    else if(uresi !=""){
+     alert ("Resi berhasil tersimpan") ;
+     window.location.href = "admin_pesanan.html";
+   }
+   else{
+    alert ("Data tidak boleh kosong") ;
+    return false;
+  }
+}
+</script>
 </html>

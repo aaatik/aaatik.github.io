@@ -5,7 +5,10 @@
   <title>Tambah Produk</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="jquery/jquery-3.4.1.min.js"></script>
+      <script src="jquery/jquery.min.js"></script>
+      <script src="adm_tambahproduk.js"></script>
+
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
@@ -34,12 +37,13 @@
   <div class="container">
       <h2 align="center"> Tambah Produk</h2>   
       <br>
+      <form action="#!" name="tambahpr">
   <div class="row">
     <div class="col-25">
       <label for="name">Nama</label>
     </div>
     <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="nama...">
+      <input type="text" id="name" name="name">
     </div>
   </div>
   <div class="row">
@@ -47,7 +51,7 @@
       <label for="harga">Harga</label>
     </div>
     <div class="col-75">
-      <input type="text" id="harga" name="harga" placeholder="Rp xxxxxx...">
+      <input type="text" id="harga" name="harga">
     </div>
   </div>
   <div class="row">
@@ -74,53 +78,37 @@
       <label for="foto">Foto</label>
     </div>
     <div class="col-75">
-      <div class="file--upload">
-      <input type="file" onchange="readURL(this)" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
-    </div>  
+      <label class="image"></label>  <!-- extend jquery adm_tambahproduk.js -->
+      <p id="bawah"> </p>  <!--  nampilin info file  -->
     </div>
-
+<br><br>
   <br><br>
   <div class="row" align="right">
-    <a href="admin_home.html"><button class="button">Simpan</button></a>
-    <a href="admin_home.html"><button class="button button3">Kembali</button></a>
+    <a class="button" href="javascript: ValidationTmbh()">Simpan</a>
+    <a href="admin_home.html" class="button button3">Kembali</a>
   </div>
-
+</form>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="../jquery/jquery.min.js"></script>
-<script type="text/javascript">
-function bacagambar(input) { // Mulai membaca inputan gambar
-  if (input.files && input.files[0]) {
-var reader = new FileReader(); // Membuat variabel reader untuk API FileReader
-reader.onload = function (e) { // Mulai pembacaan file
-$('.image--preview') // Tampilkan gambar yang dibaca ke area id #preview_gambar
-.attr('src', e.target.result)
-.width(150); // Menentukan lebar gambar preview (dalam pixel)
-//.height(200); // Jika ingin menentukan lebar gambar silahkan aktifkan perintah pada baris ini
-}
-$('.image--type').html(input.files[0].type);
-$('.image--name').html(input.files[0].name);
-$('.image--size').html(input.files[0].size);
-reader.readAsDataURL(input.files[0]);
-}
-}
-$('.file--upload input').change(function () {
-  $('.image--detail-all').remove();
-  $('.file--upload').append(`
-    <ul class="ul__list">
-    <img class="image--preview" src= alt="">
-    <li>Nama File : <span class="image--name" onchange="bacagambar(this)"></span></li>
-    <li>Ukuran : <span class="image--size" onchange="bacagambar(this)"></span></li>
-    <li>Tipe: <span class="image--type" onchange="bacagambar(this)"></span></li>
-    </ul>
-    `);
 
-      alert("Anda sudah memilih gambar!");
-    
-  bacagambar(this);
-});
-</script>
   </body>
-  
-
+<script type="text/javascript">
+  function ValidationTmbh(){   //fungsi validasi form
+    var name = document.getElementById("name").value;
+    var harga = document.getElementById("harga").value;
+    var desk = document.getElementById("desk").value;
+    console.log(name);
+    if(name =="" && harga =="" && desk ==""){ //cek jika kosong
+      alert ("Data tidak boleh kosong") ;
+      return false;
+    }
+    else if(name !="" && harga !="" && desk !=""){ //cek jika ada
+     alert ("Berhasil menambahkan produk") ; 
+     window.location.href = "admin_tambahproduk.html";
+   }
+   else{
+    alert ("Data tidak boleh kosong") ;
+    return false;
+  }
+}
+</script>
 </html>

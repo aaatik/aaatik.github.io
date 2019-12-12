@@ -5,8 +5,10 @@
   <title>Pesanan</title>
     <link rel="stylesheet" href="css/Navigation-Clean.css">
     <link rel="stylesheet" href="css/styles.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="jquery/jquery-3.4.1.min.js"></script>
+      <script src="jquery/jquery.min.js"></script>
 </head>
 <body style="background-image:url(img/bg.jpg);background-size:1400px;">
   <ul>
@@ -128,38 +130,73 @@
             </div>
         </div>
 
-<div class="w3-container">    <!--<p>Ini modal yang akan muncul kalau button bayar di klik</p> -->
+<div class="w3-container">    <!--Ini modal yang akan muncul kalau button bayar di klik< -->
   <div id="bayar" class="w3-modal">
     <div class="w3-modal-content">
       <div class="w3-container w3-white"> 
         <span onclick="document.getElementById('bayar').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span> <!--<p>Ini buat muncul close x di kanan</p> -->
+        class="w3-button w3-display-topright">&times;</span> <!--Ini buat muncul close x di kanan -->
         <h2>Bukti Bayar</h2>
         <form class="w3-container">
-     <div class="w3-section">
-          <label><b>Nama</b></label>
-         <input class="w3-input w3-border w3-margin-bottom" type="text" id="name" name="name"  required>
-         <label ><b>No Pesanan</b></label>
-         <input class="w3-input w3-border w3-margin-bottom" type="text" id="pesanan" name="pesanan"  required>
-          <label ><b>Bank</b></label>
-          <select id="jk" name="tipe">
-            <option value="bni">BNI</option>
-            <option value="bri">BRI</option>
-            <option value="bca">BCA</option>
-            <option value="mandiri">Mandiri</option>
-            <option value="Indomaret">Indomaret</option>
-          </select>
-      <label ><b>Foto Bukti Transfer</b></label>
-      <input  multiple type="file" id="preview_gambar" />
-      <br>
-      <img src="#" id="pregambar" width="250" alt="Gambar" value="Show" />
-        <p><a href="member_pesanan.html"><button class="button" >Simpan</button></a> 
-          <a href="member_pesanan.html"><button class="button button3">Batal</button>  </p>
-      <br>
+          <div class="w3-section">
+            <label><b>Nama</b></label>
+              <input type="text" id="name" name="name">
+            <label><b>No Pesanan</b></label>
+              <input type="text" id="pesanan" name="pesanan">
+            <label ><b>Bank</b></label>
+              <select id="jk" name="tipe">
+                <option value="bni">BNI</option>
+                <option value="bri">BRI</option>
+                <option value="bca">BCA</option>
+                <option value="mandiri">Mandiri</option>
+                <option value="Indomaret">Indomaret</option>
+              </select>
+            <label><b>Foto Bukti Transfer<b></label>
+            <br>
+            <input type="file" name="gambar" id="preview_gambar" />
+            <br><br>
+            <img src="#" id="pregambar" width="250" alt="Gambar" />
+            <p id="bawah"> </p>  
+            <div class="row" align="right">
+              <p><a href="member_pesanan.html"><button class="button" onclick="upBayar()">Simpan</button></a> <a href="member_pesanan.html"><button class="button button3">Batal</button></a> </p>
+            </div>
+        </form>
     </div>
   </div>
 </div>
             
 </body>
+<script type="text/javascript">
+      function upBayar() {
+        alert("Upload Pembayaran berhasil di simpan!"); 
+      }
+      var modal = document.getElementById('bayar');
+      window.onclick = function(event) { // ketika dipencet di luar area modal maka akan close
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+      }
+      
+      function bacaGambar(input) {
+        if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#pregambar').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+        }
+      }
 
+      $("#preview_gambar").change(function(){
+      bacaGambar(this);
+      $('#bawah').text("Nama file : " + this.files[0].name + " , size : " + this.files[0].size + " bytes" + " , tipe : " + this.files[0].type );    //nampilin info
+        });
+    
+      $(document).ready(function(){
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            alert('Fle "' + fileName +  '" sudah terpilih.');
+      });
+    });
+</script>
 </html>

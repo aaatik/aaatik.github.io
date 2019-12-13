@@ -1,22 +1,28 @@
 [  
   {  
-   "judul" :"Materi 5",
-   "foto" :"img/terong.jpg",
-    "harga" :"5.000"
+   "judul" :"Alpukat",
+   "foto" :"img/alpukat.jpg",
+    "harga" :"35.000"
   },
     {  
-   "judul" :"Materi 6",
-   "foto" :"img/terong.jpg",
-    "harga" :"5.000"
+   "judul" :"Bawang Putih",
+   "foto" :"img/bawangputih.jpg",
+    "harga" :"27.000"
   },
     {  
-   "judul" :"Materi 7",
-   "foto" :"img/terong.jpg",
-    "harga" :"5.000"
+   "judul" :"Lengkuas",
+   "foto" :"img/lengkuas.jpg",
+    "harga" :"2.500"
   },
+      {  
+   "judul" :"Sawi",
+   "foto" :"img/sawi.jpg",
+    "harga" :"7.500"
+  },
+
     {  
-   "judul" :"Materi 8",
-   "foto" :"img/terong.jpg",
-    "harga" :"5.000"
+   "judul" :"Selada",
+   "foto" :"img/seladaa.jpeg",
+    "harga" :"8.000"
   }
 ]

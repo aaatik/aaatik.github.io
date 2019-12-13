@@ -1,22 +1,28 @@
 [  
   {  
-   "judul" :"Terog Ungu",
+   "judul" :"Terong Ungu",
    "foto" :"img/terong.jpg",
     "harga" :"5.000"
   },
     {  
-   "judul" :"Wortel",
-   "foto" :"img/wort.jpg",
-    "harga" :"5.000"
+   "judul" :"Jeruk",
+   "foto" :"img/jeruk.jpg",
+    "harga" :"22.500"
   },
     {  
-   "judul" :"Apel",
-   "foto" :"img/apel.jpg",
-    "harga" :"5.000"
+   "judul" :"Kelengkeng",
+   "foto" :"img/kelengkeng.jpg",
+    "harga" :"10.000"
   },
     {  
-   "judul" :"Pisang",
-   "foto" :"img/pisang.jpg",
+   "judul" :"Toge",
+   "foto" :"img/toge.png",
+    "harga" :"2.000"
+  },
+
+    {  
+   "judul" :"Melon",
+   "foto" :"img/melon.jpg",
     "harga" :"5.000"
   }
 ]

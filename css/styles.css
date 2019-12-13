@@ -199,12 +199,18 @@ th, td {
     justify-content: space-between;
 }
 
-.barisproduk .kolom{
+.kolom{
     float: left;
     padding: 25px;
 }
 
-.barisproduk .kolom img{
+.kolom img{
     width: 150px;
     height: 150px;
+}
+
+.det:after {
+  content: "";
+  display: table;
+  clear: both;
 }

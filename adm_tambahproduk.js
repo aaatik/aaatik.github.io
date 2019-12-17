@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {   //dokumen ready maka akan menjalankan
-
+ 
     $.fn.uploadfoto = function () { //fungsi upload foto
         this.html(`<img src="img/im.png" alt="produk" id="produk" class="pointer" title="Upload foto Produk"/>
             <input type="file" id="upfoto" name="upfoto" class="hidden" accept="image/*">`); //image im ketika di klik akan upload
